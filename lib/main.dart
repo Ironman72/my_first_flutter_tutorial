@@ -8,19 +8,15 @@ class MyFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Test app",
+      title: 'Test App',
       home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text('Flutter demo'),
-        ),
+        appBar: AppBar(centerTitle: true, title: Text('Welcome Screen')),
         body: Material(
-          color: Colors.lime,
+          color: Colors.blueAccent,
           child: Center(
             child: Text(
-              'Login',
-              style: TextStyle(color: Colors.teal, fontSize: 50.0),
+              'Amen!',
+              style: TextStyle(color: Colors.white, fontSize: 40),
             ),
           ),
         ),
