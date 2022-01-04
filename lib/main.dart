@@ -1,22 +1,30 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'My Flutter App',
-    home: Scaffold(
+void main() => runApp(MyFlutterApp());
+
+class MyFlutterApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Test app",
+      home: Scaffold(
         appBar: AppBar(
-          title: Text("My First App Screen"),
+          centerTitle: true,
+          title: Text('Flutter demo'),
         ),
         body: Material(
-          color: Colors.blueAccent[700],
+          color: Colors.lime,
           child: Center(
-              child: Text(
-            'Praise the lord',
-            textDirection: TextDirection.ltr,
-            style: TextStyle(color: Colors.white, fontSize: 40.0),
-          )),
-        )),
-  ));
+            child: Text(
+              'Login',
+              style: TextStyle(color: Colors.teal, fontSize: 50.0),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
