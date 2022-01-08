@@ -1,26 +1,22 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:mobile_app_tutorial/screens/first_page.dart';
 
-void main() => runApp(MyFlutterApp());
+void main() => runApp(MyFirstApp());
 
-class MyFlutterApp extends StatelessWidget {
+class MyFirstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Test App',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter APP',
       home: Scaffold(
-        appBar: AppBar(centerTitle: true, title: Text('Welcome Screen')),
-        body: Material(
-          color: Colors.blueAccent,
-          child: Center(
-            child: Text(
-              'Amen!',
-              style: TextStyle(color: Colors.white, fontSize: 40),
-            ),
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text('Random Number Generator'),
           ),
-        ),
-      ),
+          body: FirstScreen()),
     );
   }
 }
