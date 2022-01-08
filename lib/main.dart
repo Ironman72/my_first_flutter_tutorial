@@ -1,16 +1,15 @@
-// ignore_for_file: use_key_in_widget_constructors
+// ignore_for_file: use_key_in_widget_constructors, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:mobile_app_tutorial/screens/first_page.dart';
 
-void main() => runApp(MyFirstApp());
+void main() => runApp(firstApp());
 
-class MyFirstApp extends StatelessWidget {
+class firstApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter APP',
+      title: 'Demo App',
       home: Scaffold(
           appBar: AppBar(
             centerTitle: true,
