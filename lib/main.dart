@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, avoid_print, sized_box_for_whitespace
+// ignore_for_file: use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
@@ -6,66 +6,98 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int number = 0;
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Text('MY FLUTTER EXERCISE'),
-        ),
-        body: Column(
-          mainAxisAlignment: number == 0
-              ? MainAxisAlignment.start
-              : number == 1
-                  ? MainAxisAlignment.center
-                  : MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: number == 0
-                  ? MainAxisAlignment.start
-                  : number == 1
-                      ? MainAxisAlignment.center
-                      : MainAxisAlignment.end,
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter APP',
+        home: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text('List View'),
+          ),
+          body: Material(
+            child: ListView(
               children: [
-                ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        if (number == 2) {
-                          number = 0;
-                        } else {
-                          number = number + 1;
-                        }
-
-                        print(number);
-                      });
-                    },
-                    child: Text('Click Me')),
+                Container(
+                  color: Colors.amber[400],
+                  child: ListTile(
+                    leading: Icon(Icons.panorama_fisheye_outlined),
+                    title: Text('Mr-Circle'),
+                    subtitle: Text('Waiting For Responce'),
+                    trailing: Icon(Icons.ac_unit),
+                  ),
+                ),
+                Container(
+                  color: Colors.pink[400],
+                  child: ListTile(
+                      leading: Icon(
+                        Icons.radio,
+                      ),
+                      title: Text('Virus'),
+                      subtitle: Text('Praise The Lord'),
+                      trailing: Icon(Icons.local_hospital_rounded)),
+                ),
+                Container(
+                  color: Colors.green[400],
+                  child: ListTile(
+                      leading: Icon(Icons.park),
+                      title: Text('Jarvis'),
+                      subtitle: Text('Good Morning..!'),
+                      trailing: Icon(Icons.hotel)),
+                ),
+                Container(
+                  color: Colors.blueGrey[400],
+                  child: ListTile(
+                      leading: Icon(Icons.grade),
+                      title: Text('Innocent'),
+                      subtitle: Text('Happy New Year'),
+                      trailing: Icon(Icons.view_in_ar)),
+                ),
+                Container(
+                  color: Colors.teal[400],
+                  child: ListTile(
+                      leading: Icon(Icons.park),
+                      title: Text('Mark42'),
+                      subtitle: Text('Item 4..!'),
+                      trailing: Icon(Icons.pause_circle_filled)),
+                ),
+                Container(
+                  color: Colors.purple[900],
+                  child: ListTile(
+                      leading: Icon(Icons.park),
+                      title: Text('Steve'),
+                      subtitle: Text('Item 5..!'),
+                      trailing: Icon(Icons.play_circle)),
+                ),
+                Container(
+                  color: Colors.purple[400],
+                  child: ListTile(
+                      leading: Icon(Icons.park),
+                      title: Text('George'),
+                      subtitle: Text('Item 6..!'),
+                      trailing: Icon(Icons.help)),
+                ),
+                Container(
+                  color: Colors.green[400],
+                  child: ListTile(
+                      leading: Icon(Icons.park),
+                      title: Text('Jarvis'),
+                      subtitle: Text('Good Morning..!'),
+                      trailing: Icon(Icons.hotel)),
+                ),
+                Container(
+                  color: Colors.green[400],
+                  child: ListTile(
+                      leading: Icon(Icons.park),
+                      title: Text('Jarvis'),
+                      subtitle: Text('Good Morning..!'),
+                      trailing: Icon(Icons.hotel)),
+                ),
               ],
-            )
-          ],
-        ),
-        bottomNavigationBar: BottomAppBar(
-          color: Colors.blueAccent,
-          child: IconButton(
-              onPressed: () {
-                print('button pressed');
-              },
-              icon: Icon(
-                Icons.home,
-                color: Colors.red[50],
-              )),
-        ),
-      ),
-    );
+            ),
+          ),
+        ));
   }
 }
