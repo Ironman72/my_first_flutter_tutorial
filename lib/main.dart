@@ -19,24 +19,25 @@ class MyApp extends StatelessWidget {
             title: Text('Rows and Columns'),
             backgroundColor: Colors.purple,
           ),
-          body: Row(
+          body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(
-                'Its a Row',
-                style: TextStyle(fontSize: 15.0),
-              ),
-              FlatButton(
-                onPressed: () {},
-                child: Text('Click Me'),
-                color: Colors.amber,
+              Container(
+                padding: EdgeInsets.all(20.0),
+                color: Colors.red,
+                child: Text('ONE'),
               ),
               Container(
-                color: Colors.cyan,
                 padding: EdgeInsets.all(30.0),
-                child: Text('This is a container'),
-              )
+                color: Colors.green,
+                child: Text('TWO'),
+              ),
+              Container(
+                padding: EdgeInsets.all(40.0),
+                color: Colors.blue,
+                child: Text("THREE"),
+              ),
             ],
           ),
           floatingActionButton: FloatingActionButton(
