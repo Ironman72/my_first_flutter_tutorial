@@ -1,6 +1,6 @@
 # mobile_app_tutorial
 
-A new Flutter project.
+# A new Flutter project.
 
 ## Getting Started
 
